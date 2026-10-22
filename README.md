@@ -51,8 +51,6 @@ MongoDB/
 
 This project is part of my journey to become a Full Stack Developer. I am learning backend development by building projects, solving errors, and understanding how different technologies work together.
 
----
-
 **Status:** Learning Project 🚧
 
 **Built with:** Node.js, Express.js, MongoDB, Mongoose, and EJS.
