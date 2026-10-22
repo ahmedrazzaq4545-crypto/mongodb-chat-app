@@ -22,7 +22,7 @@ A simple chat application built using Node.js, Express.js, MongoDB, and Mongoose
 
 ## 📁 Project Structure
 
-```text
+
 MongoDB/
 ├── models/
 │   └── chat.js
