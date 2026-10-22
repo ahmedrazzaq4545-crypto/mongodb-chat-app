@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Item</title>
+</head>
+<body>
+    <h3>Edit your message:-</h3>
+    <p>which is send from <b><%= editChat.from %></b> to  <b><%= editChat.to %></b></p>
+    <form method="POST" action="/chats/<%= editChat._id %>?_method=PUT">
+        <textarea type="text" name="msg" placeholder="Edit your message here!" required><%= editChat.msg %></textarea>
+        <br><br>
+        <button type="submit">Save Changes</button>
+    </form>
+
+</body>
+</html>
