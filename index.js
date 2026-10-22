@@ -60,9 +60,7 @@ app.post("/chats",(req,res)=>{
         console.log(err);
     });
     console.log(newChat);
-    res.redirect("/chats")
-    // let dataInsert = Chat.insertOne()
-    // res.redirect("index.ejs");
+    res.redirect("/chats");
 })
 
 
