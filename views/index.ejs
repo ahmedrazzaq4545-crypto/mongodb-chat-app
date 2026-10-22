@@ -9,6 +9,7 @@
 <body>
     <h1>All  chats:</h1>
     <form method="GET" action="/chats/new"><button>Add your new chat</button></form>
+    <br>
      <% for(let chat of chats){%>
     <div class="chat">
         From: <i><%= chat.from %></i>
@@ -16,8 +17,10 @@
          message:- <%= chat.msg %>
         </div>
         To: <i><%= chat.to %></i>
+        <hr/>
+        <p> <%= chat.date_at.toString().split(" ")[4] %> </p>
+        <p> <%= chat.date_at.toString().split(" ").slice(0,4).join("-") %> </p>
     </div>
-    
    <br><br>
    
 <% } %>
