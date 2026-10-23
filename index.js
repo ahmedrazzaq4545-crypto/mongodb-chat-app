@@ -71,8 +71,8 @@ app.post("/chats",(req,res)=>{
 
 app.get("/chats/:id/edit", async(req,res)=>{
     let {id} = req.params;
-    let editChat =await Chat.findById(id);
-    res.render("editmsg.ejs",{editChat})
+    let chats =await Chat.findById(id);
+    res.render("editmsg.ejs",{chats})
 })
 
 app.put("/chats/:id", async(req,res)=>{
@@ -80,6 +80,13 @@ app.put("/chats/:id", async(req,res)=>{
     let { msg:newMsg} = req.body;
     let updatedChat =await Chat.findByIdAndUpdate( id, { msg : newMsg },{ runValidators : true , new : true })
     console.log(updatedChat);
+    res.redirect("/chats");
+});
+
+app.delete("/chats/:id",async(req,res)=>{
+    let {id} = req.params;
+    let deletedChat = await Chat.findByIdAndDelete(id);
+    console.log(deletedChat);
     res.redirect("/chats");
 })
 
