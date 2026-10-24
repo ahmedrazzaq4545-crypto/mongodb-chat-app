@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Edit Item</title>
+     <link rel="stylesheet" href="/style.css">
 </head>
-<body>
+<body class="home">
     <h3>Edit your message:-</h3>
     <p>which is send from <b><%= chats.from %></b> to  <b><%= chats.to %></b></p>
     <form method="POST" action="/chats/<%= chats._id %>?_method=PUT">

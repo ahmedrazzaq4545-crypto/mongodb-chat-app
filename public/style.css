@@ -17,3 +17,9 @@ body{
     border-radius: 1rem;
     padding: 15px 8px;
 }
+
+.home{
+    padding-left: 600px;
+    padding-top: 100px;
+    background-color: bisque;
+}
